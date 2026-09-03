@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#120d0a"
+    >
+
+    <meta
+        name="description"
+        content="A private coffee invitation for Appi."
+    >
+
+    <title>For Appi — One Coffee?</title>
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E☕%3C/text%3E%3C/svg%3E"
+    >
+
+    <!-- Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- EmailJS -->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script>
+        emailjs.init({
+            publicKey: "1c1dKldGf2z-NU6fc"
+        });
+    </script>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background-system">
+
+        <div class="background-image"></div>
+
+        <div class="background-overlay"></div>
+
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+
+        <div class="coffee-particle particle-one">·</div>
+        <div class="coffee-particle particle-two">✦</div>
+        <div class="coffee-particle particle-three">·</div>
+        <div class="coffee-particle particle-four">✧</div>
+
+        <div class="background-steam steam-one"></div>
+        <div class="background-steam steam-two"></div>
+        <div class="background-steam steam-three"></div>
+
+        <div class="grain"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="brand-mark">☕</span>
+
+            <div>
+                <span class="brand-title">
+                    APPI × VELAN
+                </span>
+
+                <span class="brand-subtitle">
+                    PRIVATE INVITATION
+                </span>
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+
+            <span class="progress-text">
+                <span id="stepNumber">01</span>
+                <span class="progress-divider">/</span>
+                <span>11</span>
+            </span>
+
+            <div class="progress-track">
+                <div
+                    class="progress-bar"
+                    id="experienceProgress"
+                ></div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="app">
+
+        <!-- =================================================
+             SCREEN 01 — INTRO
+        ================================================== -->
+
+        <section
+            class="screen active"
+            id="intro"
+        >
+
+            <div class="screen-inner intro-inner">
+
+                <div class="private-badge">
+                    <span class="badge-dot"></span>
+                    THIS IS JUST FOR YOU
+                </div>
+
+                <div class="hero-coffee-scene">
+
+                    <div class="hero-glow"></div>
+
+                    <div class="hero-cup">
+
+                        <div class="cup-handle"></div>
+
+                        <div class="cup-body">
+
+                            <div class="coffee-surface">
+
+                                <div class="coffee-highlight"></div>
+
+                                <div class="coffee-crema"></div>
+
+                            </div>
+
+                            <div class="cup-shine"></div>
+
+                        </div>
+
+                        <div class="cup-steam steam-a"></div>
+                        <div class="cup-steam steam-b"></div>
+                        <div class="cup-steam steam-c"></div>
+
+                    </div>
+
+                    <div class="cup-saucer"></div>
+
+                </div>
+
+
+                <p class="eyebrow">
+                    A SMALL REQUEST, SG
+                </p>
+
+                <h1 class="hero-title">
+                    Appi,
+                    <span>one coffee?</span>
+                </h1>
+
+                <p class="hero-description">
+                    I could have simply asked you.
+                    <br>
+                    But where's the fun in that?
+                </p>
+
+                <button
+                    class="primary-button hero-button"
+                    id="openButton"
+                >
+                    <span>OPEN YOUR INVITATION</span>
+                    <strong>→</strong>
+                </button>
+
+                <p class="micro-copy">
+                    Take your time. There is no rush.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 02 — STORY
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="story"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    BEFORE WE START
+                </p>
+
+                <h2 class="section-title">
+                    Small Girl,
+                    <span>this is simple.</span>
+                </h2>
+
+                <div class="story-card glass-card">
+
+                    <div class="story-number">
+                        01
+                    </div>
+
+                    <p>
+                        No complicated plans.
+                        No fancy restaurant.
+                        No unnecessarily dramatic speech.
+                    </p>
+
+                    <p>
+                        Just you, me, coffee,
+                        and hopefully a few hours
+                        where neither of us has anywhere
+                        more important to be.
+                    </p>
+
+                    <div class="story-signature">
+                        — Velan
+                    </div>
+
+                </div>
+
+                <div class="reason-grid">
+
+                    <div class="reason-card">
+                        <span>01</span>
+                        <strong>GOOD COFFEE</strong>
+                        <p>
+                            Obviously important.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <span>02</span>
+                        <strong>GOOD COMPANY</strong>
+                        <p>
+                            This part is the point.
+                        </p>
+                    </div>
+
+                    <div class="reason-card">
+                        <span>03</span>
+                        <strong>NO RUSH</strong>
+                        <p>
+                            Just a little time together.
+                        </p>
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="storyButton"
+                >
+                    <span>CONTINUE</span>
+                    <strong>→</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 03 — QUESTION
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="question"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    THE IMPORTANT PART
+                </p>
+
+                <h2 class="section-title">
+                    So, Appi...
+                </h2>
+
+                <div class="question-card glass-card">
+
+                    <div class="question-coffee">
+                        ☕
+                    </div>
+
+                    <h3>
+                        Will you go for coffee
+                        with me?
+                    </h3>
+
+                    <p>
+                        Official question.
+                        No hidden terms and conditions.
+                    </p>
+
+                </div>
+
+                <div
+                    class="question-buttons"
+                    id="questionButtons"
+                >
+
+                    <button
+                        class="yes-button"
+                        id="yesButton"
+                    >
+                        YES, LET'S GO
+                        <span>☕</span>
+                    </button>
+
+                    <button
+                        class="no-button"
+                        id="noButton"
+                    >
+                        NO
+                    </button>
+
+                </div>
+
+                <p
+                    class="no-hint"
+                    id="noHint"
+                >
+                    You can still say no... technically.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 04 — DATE
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="date"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    STEP 01 / 05
+                </p>
+
+                <h2 class="section-title">
+                    Pick the day
+                    <span>that works for you.</span>
+                </h2>
+
+                <p class="section-description">
+                    You choose the date.
+                    I'll make sure I'm there.
+                </p>
+
+                <div class="date-card glass-card">
+
+                    <div class="field-label">
+                        COFFEE DATE
+                    </div>
+
+                    <input
+                        type="date"
+                        id="dateInput"
+                    >
+
+                    <div class="field-hint">
+                        Pick any day from today onward.
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="dateButton"
+                    disabled
+                >
+                    <span>NEXT — PICK A TIME</span>
+                    <strong>→</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 05 — TIME
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="time"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    STEP 02 / 05
+                </p>
+
+                <h2 class="section-title">
+                    What time
+                    <span>feels right?</span>
+                </h2>
+
+                <p class="section-description">
+                    No need to squeeze it between
+                    ten other things.
+                </p>
+
+                <div class="time-card glass-card">
+
+                    <div class="time-options">
+
+                        <button
+                            class="time-option"
+                            data-time="16:30"
+                        >
+                            <span>4:30 PM</span>
+                            <small>Early coffee</small>
+                        </button>
+
+                        <button
+                            class="time-option"
+                            data-time="17:00"
+                        >
+                            <span>5:00 PM</span>
+                            <small>Perfect timing</small>
+                        </button>
+
+                        <button
+                            class="time-option"
+                            data-time="17:30"
+                        >
+                            <span>5:30 PM</span>
+                            <small>Evening coffee</small>
+                        </button>
+
+                        <button
+                            class="time-option"
+                            data-time="18:00"
+                        >
+                            <span>6:00 PM</span>
+                            <small>Slow evening</small>
+                        </button>
+
+                    </div>
+
+                    <button
+                        class="custom-time-toggle"
+                        id="customTimeToggle"
+                    >
+                        Choose another time
+                        <span>+</span>
+                    </button>
+
+                    <div
+                        class="custom-time-panel"
+                        id="customTimePanel"
+                        hidden
+                    >
+
+                        <label for="customTimeInput">
+                            YOUR TIME
+                        </label>
+
+                        <input
+                            type="time"
+                            id="customTimeInput"
+                        >
+
+                    </div>
+
+                    <div class="selected-time">
+
+                        <span>
+                            SELECTED
+                        </span>
+
+                        <strong id="selectedTimeLabel">
+                            Choose a time
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="timeButton"
+                    disabled
+                >
+                    <span>NEXT — PICK A PLACE</span>
+                    <strong>→</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 06 — PLACE
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="place"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    STEP 03 / 05
+                </p>
+
+                <h2 class="section-title">
+                    Where should
+                    <span>we disappear for coffee?</span>
+                </h2>
+
+                <div class="place-list">
+
+                    <button
+                        class="place-option glass-card"
+                        data-place="Inside College Campus (Nescafé)"
+                    >
+
+                        <span class="place-icon">
+                            ☕
+                        </span>
+
+                        <span class="place-content">
+                            <strong>
+                                Inside College Campus
+                            </strong>
+
+                            <small>
+                                Nescafé
+                            </small>
+                        </span>
+
+                        <span class="option-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="place-option glass-card"
+                        data-place="Udupi Garden (Near East Point Hospital)"
+                    >
+
+                        <span class="place-icon">
+                            ◉
+                        </span>
+
+                        <span class="place-content">
+                            <strong>
+                                Udupi Garden
+                            </strong>
+
+                            <small>
+                                Near East Point Hospital
+                            </small>
+                        </span>
+
+                        <span class="option-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="place-option glass-card"
+                        data-place="Your Choice"
+                    >
+
+                        <span class="place-icon">
+                            ✦
+                        </span>
+
+                        <span class="place-content">
+                            <strong>
+                                Your Choice
+                            </strong>
+
+                            <small>
+                                SG gets final say
+                            </small>
+                        </span>
+
+                        <span class="option-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 07 — DRINK
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="drink"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    STEP 04 / 05
+                </p>
+
+                <h2 class="section-title">
+                    Now the serious question:
+                    <span>what are we drinking?</span>
+                </h2>
+
+                <div class="drink-grid">
+
+                    <button
+                        class="choice-card glass-card"
+                        data-drink="Coffee"
+                    >
+
+                        <span class="choice-icon">
+                            ☕
+                        </span>
+
+                        <strong>
+                            COFFEE
+                        </strong>
+
+                        <small>
+                            The obvious answer.
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="choice-card glass-card"
+                        data-drink="Cold Coffee"
+                    >
+
+                        <span class="choice-icon">
+                            🧊
+                        </span>
+
+                        <strong>
+                            COLD COFFEE
+                        </strong>
+
+                        <small>
+                            For the cold-coffee people.
+                        </small>
+
+                    </button>
+
+
+                    <button
+                        class="choice-card glass-card"
+                        data-drink="Your Choice"
+                    >
+
+                        <span class="choice-icon">
+                            ✦
+                        </span>
+
+                        <strong>
+                            YOUR CHOICE
+                        </strong>
+
+                        <small>
+                            You decide. I trust you.
+                        </small>
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="drinkButton"
+                    disabled
+                >
+                    <span>NEXT — PICK THE VIBE</span>
+                    <strong>→</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 08 — VIBE
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="vibe"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    STEP 05 / 05
+                </p>
+
+                <h2 class="section-title">
+                    And what kind of
+                    <span>evening are we having?</span>
+                </h2>
+
+                <div class="vibe-list">
+
+                    <button
+                        class="choice-row glass-card"
+                        data-vibe="Just Coffee & Conversation"
+                    >
+
+                        <span class="vibe-number">
+                            01
+                        </span>
+
+                        <span>
+                            <strong>
+                                JUST COFFEE & CONVERSATION
+                            </strong>
+
+                            <small>
+                                No agenda. Just us talking.
+                            </small>
+                        </span>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <button
+                        class="choice-row glass-card"
+                        data-vibe="Walk & Coffee"
+                    >
+
+                        <span class="vibe-number">
+                            02
+                        </span>
+
+                        <span>
+                            <strong>
+                                WALK & COFFEE
+                            </strong>
+
+                            <small>
+                                Coffee first. Random walking later.
+                            </small>
+                        </span>
+
+                        <b>→</b>
+
+                    </button>
+
+
+                    <button
+                        class="choice-row glass-card"
+                        data-vibe="Whatever Happens"
+                    >
+
+                        <span class="vibe-number">
+                            03
+                        </span>
+
+                        <span>
+                            <strong>
+                                WHATEVER HAPPENS
+                            </strong>
+
+                            <small>
+                                Probably the most accurate option.
+                            </small>
+                        </span>
+
+                        <b>→</b>
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="vibeButton"
+                    disabled
+                >
+                    <span>ONE LAST THING</span>
+                    <strong>→</strong>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 09 — NOTE
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="note"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    OPTIONAL
+                </p>
+
+                <h2 class="section-title">
+                    Anything you want
+                    <span>me to know?</span>
+                </h2>
+
+                <p class="section-description">
+                    Leave me a small note.
+                    Or don't. I won't complain.
+                </p>
+
+                <div class="note-card glass-card">
+
+                    <textarea
+                        id="noteInput"
+                        maxlength="240"
+                        placeholder="Something you want to tell me..."
+                    ></textarea>
+
+                    <div class="note-footer">
+
+                        <span>
+                            PRIVATE NOTE
+                        </span>
+
+                        <span id="noteCount">
+                            0 / 240
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="note-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="skipNoteButton"
+                    >
+                        SKIP
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        id="noteButton"
+                    >
+                        <span>REVIEW THE PLAN</span>
+                        <strong>→</strong>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 10 — REVIEW
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="review"
+        >
+
+            <div class="screen-inner">
+
+                <p class="eyebrow">
+                    FINAL CHECK
+                </p>
+
+                <h2 class="section-title">
+                    Your coffee plan
+                    <span>looks like this.</span>
+                </h2>
+
+                <div class="ticket">
+
+                    <div class="ticket-top">
+
+                        <span>
+                            PRIVATE COFFEE PLAN
+                        </span>
+
+                        <span>
+                            APPI × VELAN
+                        </span>
+
+                    </div>
+
+                    <div class="ticket-title">
+                        ONE EVENING,
+                        <br>
+                        JUST FOR US.
+                    </div>
+
+                    <div class="ticket-divider"></div>
+
+                    <div class="ticket-row">
+
+                        <span>DATE</span>
+
+                        <strong id="reviewDate">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div class="ticket-row">
+
+                        <span>TIME</span>
+
+                        <strong id="reviewTime">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div class="ticket-row">
+
+                        <span>PLACE</span>
+
+                        <strong id="reviewPlace">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div class="ticket-row">
+
+                        <span>DRINK</span>
+
+                        <strong id="reviewDrink">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div class="ticket-row">
+
+                        <span>VIBE</span>
+
+                        <strong id="reviewVibe">
+                            Not selected
+                        </strong>
+
+                    </div>
+
+                    <div
+                        class="ticket-note"
+                        id="reviewNoteWrap"
+                    >
+
+                        <span>NOTE</span>
+
+                        <p id="reviewNote"></p>
+
+                    </div>
+
+                    <div class="ticket-divider"></div>
+
+                    <div class="ticket-bottom">
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <strong>
+                            WAITING FOR SG
+                        </strong>
+
+                    </div>
+
+                </div>
+
+                <p class="review-message">
+                    Everything good?
+                    Then let's make it official.
+                </p>
+
+                <button
+                    class="confirm-button"
+                    id="confirmButton"
+                >
+                    MAKE IT OFFICIAL
+                    <span>→</span>
+                </button>
+
+                <p
+                    class="email-status"
+                    id="emailStatus"
+                ></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SCREEN 11 — SUCCESS
+        ================================================== -->
+
+        <section
+            class="screen"
+            id="success"
+        >
+
+            <div class="screen-inner success-inner">
+
+                <div class="success-mark">
+                    <span>☕</span>
+                </div>
+
+                <p class="eyebrow">
+                    IT'S OFFICIAL
+                </p>
+
+                <h2 class="success-title">
+                    Coffee with
+                    <span>Appi.</span>
+                </h2>
+
+                <p class="success-description">
+                    Good. Now it's officially a plan.
+                    <br>
+                    I'll see you there, Small Girl.
+                </p>
+
+                <div class="confirmed-card glass-card">
+
+                    <div class="confirmed-header">
+                        <span>
+                            CONFIRMED
+                        </span>
+
+                        <span>
+                            ☕
+                        </span>
+                    </div>
+
+                    <div class="confirmed-row">
+
+                        <span>DATE</span>
+
+                        <strong id="successDate">
+                            —
+                        </strong>
+
+                    </div>
+
+                    <div class="confirmed-row">
+
+                        <span>TIME</span>
+
+                        <strong id="successTime">
+                            —
+                        </strong>
+
+                    </div>
+
+                    <div class="confirmed-row">
+
+                        <span>PLACE</span>
+
+                        <strong id="successPlace">
+                            —
+                        </strong>
+
+                    </div>
+
+                    <div class="confirmed-row">
+
+                        <span>DRINK</span>
+
+                        <strong id="successDrink">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COUNTDOWN -->
+
+                <div class="countdown-title">
+                    UNTIL COFFEE
+                </div>
+
+                <div class="countdown">
+
+                    <div class="countdown-item">
+                        <strong id="days">00</strong>
+                        <span>DAYS</span>
+                    </div>
+
+                    <div class="countdown-separator">
+                        :
+                    </div>
+
+                    <div class="countdown-item">
+                        <strong id="hours">00</strong>
+                        <span>HOURS</span>
+                    </div>
+
+                    <div class="countdown-separator">
+                        :
+                    </div>
+
+                    <div class="countdown-item">
+                        <strong id="minutes">00</strong>
+                        <span>MINUTES</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ANOTHER COFFEE -->
+
+                <div class="another-coffee-section">
+
+                    <div class="another-line"></div>
+
+                    <button
+                        class="another-coffee-button"
+                        id="anotherCoffeeButton"
+                    >
+                        <span>☕</span>
+                        PLAN ANOTHER COFFEE
+                        <span>→</span>
+                    </button>
+
+                    <p class="another-coffee-hint">
+                        Because apparently one coffee wasn't enough.
+                    </p>
+
+                </div>
+
+
+                <p class="success-footer">
+                    Made specifically for Appi.
+                    <br>
+                    No template. No audience. Just you.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         CONFIRMATION MODAL
+    ====================================================== -->
+
+    <div
+        class="confirmation-modal"
+        id="confirmationModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-backdrop"></div>
+
+        <div class="modal-card">
+
+            <div class="modal-coffee-icon">
+                ☕
+            </div>
+
+            <p
+                class="modal-eyebrow"
+                id="modalEyebrow"
+            >
+                PROCESSING
+            </p>
+
+            <h3 id="modalTitle">
+                Preparing your coffee plan...
+            </h3>
+
+            <p id="modalMessage">
+                Just a moment.
+            </p>
+
+            <div class="brew-progress">
+
+                <div
+                    id="brewProgress"
+                    class="brew-progress-bar"
+                ></div>
+
+            </div>
+
+            <div class="brew-steps">
+
+                <div
+                    class="brew-step"
+                    id="brewStep1"
+                >
+                    <span>01</span>
+                    <strong>PLAN</strong>
+                </div>
+
+                <div
+                    class="brew-step"
+                    id="brewStep2"
+                >
+                    <span>02</span>
+                    <strong>CHECK</strong>
+                </div>
+
+                <div
+                    class="brew-step"
+                    id="brewStep3"
+                >
+                    <span>03</span>
+                    <strong>BREW</strong>
+                </div>
+
+                <div
+                    class="brew-step"
+                    id="brewStep4"
+                >
+                    <span>04</span>
+                    <strong>READY</strong>
+                </div>
+
+            </div>
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                hidden
+            >
+                CONTINUE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <!-- =====================================================
+         SCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

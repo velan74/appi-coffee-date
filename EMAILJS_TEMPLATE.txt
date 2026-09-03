@@ -1,0 +1,76 @@
+EMAILJS TEMPLATE SETTINGS
+
+To Email:
+{{to_email}}
+
+From Name:
+Coffee Date Website ☕
+
+From Email:
+Use Default Email Address: ON
+
+Reply To:
+(empty)
+
+CC:
+(empty)
+
+BCC:
+(empty)
+
+----------------------------------------
+EMAIL CONTENT
+----------------------------------------
+
+Use the following HTML in the EmailJS Code Editor:
+
+<div style="background:#1b120d;padding:40px 20px;font-family:Arial,sans-serif;color:#f5eee7;">
+  <div style="max-width:600px;margin:auto;background:#2a1b14;border-radius:18px;padding:35px;">
+    <div style="text-align:center;">
+      <div style="font-size:42px;">☕</div>
+      <h1 style="color:#e8c39e;margin-bottom:8px;">Coffee Date Confirmed</h1>
+      <p style="color:#cdbfb5;font-size:16px;">{{recipient_name}}, it's officially happening. 😌</p>
+    </div>
+
+    <hr style="border:none;border-top:1px solid #4a3529;margin:30px 0;">
+
+    <p style="font-size:17px;">Hey {{recipient_name}},</p>
+
+    <p style="line-height:1.7;color:#ddd0c7;">
+      The website has done its job. The coffee date is officially confirmed. ☕
+    </p>
+
+    <div style="background:#1f1510;border-radius:12px;padding:22px;margin-top:25px;">
+      <p>📅 <strong>Date</strong><br><span style="color:#e8c39e;">{{date}}</span></p>
+      <p>⏰ <strong>Time</strong><br><span style="color:#e8c39e;">{{time}}</span></p>
+      <p>📍 <strong>Place</strong><br><span style="color:#e8c39e;">{{place}}</span></p>
+      <p>☕ <strong>Drink</strong><br><span style="color:#e8c39e;">{{drink}}</span></p>
+      <p>✨ <strong>Vibe</strong><br><span style="color:#e8c39e;">{{vibe}}</span></p>
+      <p>📝 <strong>Note</strong><br><span style="color:#e8c39e;">{{note}}</span></p>
+    </div>
+
+    <p style="text-align:center;margin-top:30px;">
+      <strong>STATUS: {{status}}</strong>
+    </p>
+
+    <p style="text-align:center;color:#cdbfb5;margin-top:30px;">
+      {{#if recipient_type}}Made with an unnecessary amount of coding. 😂{{/if}}
+    </p>
+
+    <p style="text-align:center;font-size:18px;margin-top:25px;">
+      DON'T BE LATE. ☕
+    </p>
+
+    <p style="text-align:center;color:#9f8d80;margin-top:35px;">
+      SG × V
+    </p>
+  </div>
+</div>
+
+NOTE:
+The {{#if ...}} line is optional and can be removed if EmailJS's template editor does not support conditional syntax. The rest uses normal EmailJS variables.
+
+
+--- Recommended dynamic variables for the upgraded popup/email experience ---
+recipient_name, recipient_type, to_email, date, time, place, drink, vibe, note, status
+Use To Email = {{to_email}}. Keep the browser public key only; never put the EmailJS private key in script.js.
