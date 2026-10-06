@@ -432,6 +432,24 @@ function goTo(
 
 
     /*
+       Notify the effects layer (fx.js).
+    */
+
+    document.dispatchEvent(
+        new CustomEvent(
+            "screenchange",
+            {
+                detail: {
+                    id: screenId,
+                    from: current ? current.id : null,
+                    back: nextScreen.classList.contains("enter-left")
+                }
+            }
+        )
+    );
+
+
+    /*
        Scroll.
     */
 
@@ -784,9 +802,10 @@ function moveNoButton() {
     }
 
 
+    /* particles burst from where the button just escaped (viewport coords) */
     createTinyEscapeParticles(
-        x,
-        y
+        button.left + button.width / 2,
+        button.top + button.height / 2
     );
 
     savePlan();
@@ -2433,6 +2452,8 @@ function createCelebration() {
 
 
     createCoffeeBurst();
+
+    window.FX?.celebrate();
 }
 
 
@@ -2450,6 +2471,8 @@ function createCoffeeBurst() {
 
     burst.className =
         "coffee-burst";
+
+    window.FX?.burst();
 
 
     burst.innerHTML = `
@@ -2483,6 +2506,8 @@ function createCoffeeBurst() {
 ========================================================= */
 
 function createMiniSparkles() {
+
+    window.FX?.sparkle();
 
     for (
         let i = 0;
