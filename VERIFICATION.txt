@@ -1,0 +1,18 @@
+Browser verification: desktop 1440 x 900; phones 360 x 740 and 400 x 642.
+
+All 11 screens checked at each size: active screen, matching sunlight mood,
+no horizontal overflow, no fluid canvas and no JavaScript runtime exceptions.
+80 repeated No button dodges checked at each size: inside its movement area,
+at least 14px from Yes, and at least 64px intended movement per dodge.
+Six hearts on Yes, removed after about two seconds.
+Success hearts stop and are removed after about five seconds.
+Reduced motion: still leaf shadows and no visible or moving hearts.
+Original IDs preserved except the explicitly removed fluid canvas.
+script.js changes restricted to moveNoButton; tracking.js unchanged.
+
+Modern calendar and time controls were browser-checked in preceding updates:
+month navigation, past-date blocking, selection and existing Next buttons,
+AM/PM conversions, and phone layout.
+
+These are Chrome browser checks with emulated phone viewports, not tests on
+physical Android or iPhone hardware. Email delivery was not triggered.
