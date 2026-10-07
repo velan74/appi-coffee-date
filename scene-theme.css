@@ -1,0 +1,63 @@
+/* Content belongs to the café: luminous type, smoked glass, and a grounded cup. */
+:root { --ink:#f6ecdf; --ink-2:rgba(246,236,223,.85); --ink-3:#d5bea2; --ink-4:rgba(246,236,223,.55); --crema:#e2b07a; --crema-hi:#f0d4ac; --line:rgba(201,167,122,.23); --line-2:rgba(201,167,122,.42); --g-text:linear-gradient(#e2b07a,#e2b07a); }
+html,body { background:#2a1a12; }
+.background-system::after { content:''; position:absolute; inset:0; opacity:1; pointer-events:none; background:radial-gradient(ellipse 52% 74% at 50% 51%,rgba(42,26,18,.61),rgba(42,26,18,.32) 76%,transparent 100%),linear-gradient(180deg,rgba(42,26,18,.04) 0%,rgba(42,26,18,.15) 40%,rgba(42,26,18,.58) 100%); }
+.sun-mood { opacity:0; }
+.sun-mood.is-current { opacity:.48; }
+.screen-inner { color:var(--ink); background:rgba(42,26,18,.40); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-color:rgba(201,167,122,.45); box-shadow:0 20px 60px -30px rgba(25,15,10,.48); }
+.screen-inner h1,.screen-inner h2,.screen-inner h3,.hero-description,.section-description,.success-description { color:var(--ink); text-shadow:0 2px 14px rgba(25,15,10,.26); }
+.hero-description,.section-description,.success-description { color:var(--ink-2); }
+.accent,.accent .wi { color:#e2b07a; -webkit-text-fill-color:#e2b07a; background:none; }
+.eyebrow,.field-label,.micro-copy { color:#d5bea2; }
+.intro-inner { background:none; border:0; box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none; padding:14px 24px 0; justify-content:flex-start; gap:14px; max-width:650px; }
+.intro-inner .private-badge { order:0; background:rgba(42,26,18,.30); border:1px solid rgba(201,167,122,.6); color:#f6ecdf; margin-bottom:3px; backdrop-filter:blur(8px); }
+.intro-inner .eyebrow { order:1; margin:0; }
+.intro-inner .hero-title { order:2; margin:0; font-size:clamp(64px,8.4svh,92px); }
+.intro-inner .hero-description { order:3; margin:2px 0 4px; }
+.intro-inner .hero-button { order:4; margin:0; }
+.intro-inner .micro-copy { order:5; margin:0; color:#dcc7ab; }
+.intro-inner .hero-coffee-scene { order:6; margin-top:auto; height:min(32svh,345px); width:420px; max-width:100%; }
+.hero-coffee-scene::before { content:''; position:absolute; z-index:-1; left:-45%; right:-45%; top:82%; height:25%; border:0; border-radius:0; box-shadow:none; background:linear-gradient(176deg,rgba(176,124,70,.02),rgba(161,105,54,.28) 25%,rgba(96,60,32,.18) 68%,transparent),repeating-linear-gradient(3deg,transparent 0 11px,rgba(201,157,100,.035) 12px 13px); mask-image:radial-gradient(ellipse,#000 22%,transparent 73%); -webkit-mask-image:radial-gradient(ellipse,#000 22%,transparent 73%); }
+.hero-coffee-scene::after { background:radial-gradient(ellipse,rgba(33,20,12,.55),rgba(33,20,12,.25) 48%,transparent 74%); bottom:2%; width:57%; left:21.5%; height:8%; }
+.hero-cup-photo { filter:drop-shadow(-2px -1px 2px rgba(255,218,147,.25)); }
+.photo-steam path { stroke:#e1cbb0; }
+.steam-hearts path { stroke:#e1cbb0; }
+.glass-card,.reason-card,.countdown-item,.modal-card { color:var(--ink); background:rgba(42,26,18,.40); background-image:none; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); border-color:rgba(201,167,122,.32); box-shadow:0 16px 38px -24px rgba(25,15,10,.4); }
+.glass-card::after { opacity:.08; }
+.primary-button,.yes-button,.confirm-button,.another-coffee-button,.modal-close { background:#f1ddbd; color:#2a1a12; --liquid:#e2b07a; border-color:rgba(233,202,158,.6); box-shadow:0 10px 25px -14px rgba(17,10,6,.45); text-shadow:none; }
+.primary-button strong,.confirm-button span { background:rgba(42,26,18,.10); color:#2a1a12; }
+.primary-button:not(:disabled):hover,.yes-button:not(:disabled):hover,.confirm-button:not(:disabled):hover,.another-coffee-button:not(:disabled):hover,.modal-close:not(:disabled):hover { color:#2a1a12; }
+.primary-button:not(:disabled):hover strong,.confirm-button:not(:disabled):hover span { background:rgba(42,26,18,.16); color:#2a1a12; }
+.primary-button:disabled { background:rgba(246,236,223,.10); color:rgba(246,236,223,.54); }
+.primary-button:disabled strong { color:rgba(246,236,223,.54); }
+.cinematic-back,.no-button,.secondary-button { color:#f6ecdf; background:rgba(42,26,18,.42); border-color:rgba(201,167,122,.36); }
+.time-option:not(.selected),.place-option:not(.selected),.choice-card:not(.selected),.choice-row:not(.selected),.date-field input,.custom-time-panel,.calendar-trigger,.coffee-calendar,.modern-time-panel,.toast { color:var(--ink); background:rgba(42,26,18,.64); }
+.time-option.selected,.place-option.selected,.choice-card.selected,.choice-row.selected { color:#2a1a12; background:#e8c69e; }
+.time-option.selected small,.place-option.selected small,.choice-card.selected small,.choice-row.selected small { color:#62422c; }
+.place-option:hover,.choice-card:hover,.choice-row:hover { background:rgba(70,44,28,.70); }
+.place-option.selected:hover,.choice-card.selected:hover,.choice-row.selected:hover { background:#e8c69e; }
+.modern-time-panel .time-number { background:rgba(255,246,228,.10); color:#f6ecdf; border-color:var(--line-2); }
+.calendar-day[aria-pressed="true"],.time-period button[aria-pressed="true"] { background:#e2b07a; color:#2a1a12; }
+.calendar-day:not(:disabled):not([aria-pressed="true"]):hover,.calendar-nav:not(:disabled):hover { background:rgba(255,238,212,.10); }
+.ticket { --ink:#2a1a12; --ink-2:#574033; --ink-3:#725546; --ink-4:#8a7057; --crema:#915c35; --crema-hi:#6e4126; color:#2a1a12; text-shadow:none; background:linear-gradient(140deg,#fbf0df,#ead2b2); }
+.ticket h1,.ticket h2,.ticket h3 { color:#2a1a12; text-shadow:none; }
+.success-mark { background:rgba(246,236,223,.06); }
+.success-mark .av-letters { stroke:#f6ecdf; }
+.success-mark .av-circle { stroke:#d8b681; }
+.cursor-dot,.cursor-ring { display:none !important; }
+body.has-custom-cursor,body.has-custom-cursor * { cursor:auto !important; }
+body.has-custom-cursor button,body.has-custom-cursor a,body.has-custom-cursor button * { cursor:pointer !important; }
+body.has-custom-cursor input,body.has-custom-cursor textarea { cursor:text !important; }
+@media (max-width:640px) {
+    .intro-inner { padding:12px 14px 0; gap:12px; }
+    .intro-inner .hero-title { font-size:56px; }
+    .intro-inner .hero-description { font-size:15px; }
+    .intro-inner .hero-button { max-width:310px; height:56px; }
+    .intro-inner .hero-coffee-scene { height:265px; width:310px; }
+    .hero-coffee-scene::before { top:79%; height:21%; left:-8%; right:-8%; }
+}
+@media (max-height:740px) and (max-width:640px) {
+    .intro-inner { gap:8px; }
+    .intro-inner .hero-title { font-size:46px; }
+    .intro-inner .hero-coffee-scene { height:30svh; }
+}

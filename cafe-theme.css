@@ -1,0 +1,63 @@
+/* Fixed café photograph with gentle tint crossfades and readable cream glass. */
+.background-system { background:#4b3528; }
+.cafe-photo { position:absolute; inset:-14px; background:url('assets/cafe-bg-desktop.webp') center / cover no-repeat; filter:blur(7px) saturate(.88); animation:cafe-zoom 30s ease-in-out infinite alternate; transform-origin:center bottom; }
+@keyframes cafe-zoom { from { transform:scale(1); } to { transform:scale(1.05); } }
+.sunlight-wall { inset:0; overflow:hidden; animation:none; }
+.sun-mood { inset:0; background:rgba(91,59,37,.40) !important; transition:opacity 1.8s ease-in-out; animation:none; }
+.sun-mood[data-mood="intro"] { background:rgba(94,66,43,.36) !important; }
+.sun-mood[data-mood="story"] { background:rgba(93,63,38,.35) !important; }
+.sun-mood[data-mood="question"] { background:rgba(98,63,40,.37) !important; }
+.sun-mood[data-mood="date"] { background:rgba(101,67,39,.38) !important; }
+.sun-mood[data-mood="time"] { background:rgba(104,66,38,.40) !important; }
+.sun-mood[data-mood="place"] { background:rgba(103,62,32,.41) !important; }
+.sun-mood[data-mood="drink"] { background:rgba(108,65,33,.42) !important; }
+.sun-mood[data-mood="vibe"] { background:rgba(106,65,52,.39) !important; }
+.sun-mood[data-mood="note"] { background:rgba(106,62,51,.40) !important; }
+.sun-mood[data-mood="review"] { background:rgba(121,78,37,.39) !important; }
+.sun-mood[data-mood="success"] { background:rgba(138,82,34,.40) !important; }
+.vignette { background:radial-gradient(ellipse at 50% 42%,transparent 35%,rgba(52,32,21,.31)); }
+.grain { opacity:.025; }
+.background-system::after { content:none; }
+.sun-dust,.spotlight { display:none; }
+.screen-inner { position:relative; padding:36px 34px; border:1px solid rgba(201,167,122,.62); border-radius:32px; background:rgba(252,243,228,.84); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:0 24px 70px -28px rgba(47,29,18,.44),inset 0 1px 0 rgba(255,250,239,.55); }
+.intro-inner { max-width:560px; padding:24px 30px; height:calc(100svh - 114px); gap:12px; }
+.glass-card,.reason-card,.countdown-item { background:rgba(255,250,241,.56); box-shadow:0 12px 32px -24px rgba(94,63,39,.26); border-color:rgba(150,115,78,.18); }
+.glass-card::before { display:none; }
+.eyebrow::before,.eyebrow::after,.another-line { display:none; }
+.private-badge { border:0; background:rgba(255,250,238,.5); flex-shrink:0; }
+.question-coffee { display:none; }
+.topbar { background:linear-gradient(rgba(56,38,25,.22),transparent); }
+.brand-title { color:#fff1df; }
+.brand-title em { color:#ebcaa0; }
+.brand-mark .av-letters { stroke:#fff0da; }
+.brand-mark .av-circle { stroke:#e3c293; }
+.progress-track { background:rgba(255,235,208,.24); }
+.progress-bar { background:#edd2ab; }
+.hero-coffee-scene .hero-glow { background:radial-gradient(ellipse,rgba(255,225,170,.29),transparent 70%); }
+.ticket-sheen { display:none; }
+@media (max-width:768px) { .cafe-photo { background-image:url('assets/cafe-bg-mobile.webp'); background-position:center bottom; } }
+@media (max-width:640px) {
+    .app { padding:94px 16px 28px; }
+    body[data-screen="intro"] .app { padding:82px 16px 20px; }
+    .screen-inner { padding:28px 20px; border-radius:28px; }
+    .intro-inner { height:calc(100svh - 102px); padding:20px 16px; gap:10px; }
+    .hero-coffee-scene { height:238px; width:100%; max-width:100%; }
+    .hero-title { font-size:54px; }
+    .hero-description { font-size:14.5px; }
+    .hero-button { width:100%; }
+    .question-buttons .yes-button { padding-inline:25px; }
+    .time-card,.date-card { padding:20px 12px; }
+    .countdown { gap:5px; }
+    .countdown-item { width:82px; }
+    .ticket { width:100%; }
+    .ticket-row { gap:12px; }
+    .ticket-row strong { max-width:72%; overflow-wrap:anywhere; }
+}
+@media (max-height:740px) and (max-width:640px) {
+    .intro-inner { gap:7px; padding-block:14px; }
+    .hero-coffee-scene { height:26svh; }
+    .hero-title { font-size:44px; }
+    .hero-description { font-size:13px; }
+}
+@media (prefers-reduced-motion:reduce) { .cafe-photo { animation:none !important; transform:none; } .sun-mood { transition:none !important; } }
+.sun-paused .cafe-photo { animation-play-state:paused !important; }

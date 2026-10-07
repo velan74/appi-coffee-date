@@ -285,7 +285,7 @@
             document.body.classList.add("is-loaded");
 
             if (loader) {
-                setTimeout(() => loader.remove(), 1400);
+                loader.remove();
             }
         };
 
@@ -301,15 +301,16 @@
             if (done) return;
             done = true;
             loader.classList.add("is-done");
-            setTimeout(finish, 450);
+            // Keep the intro paused until the café has come into focus.
+            setTimeout(finish, 1400);
         };
 
-        /* Pour takes ~1.7s; wait for fonts too, but never longer than 3.2s */
+        /* Draw for 1.75s, focus for 1.4s; font deadline keeps total under 3.5s. */
         const minTime = new Promise(r => setTimeout(r, 1750));
         const fonts = document.fonts ? document.fonts.ready.catch(() => {}) : Promise.resolve();
 
         Promise.all([minTime, fonts]).then(go);
-        setTimeout(go, 3200);
+        setTimeout(go, 2000);
     }
 
 

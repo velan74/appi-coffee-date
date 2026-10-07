@@ -1,4 +1,103 @@
 Browser verification: desktop 1440 x 900; phones 360 x 740 and 400 x 642.
+Luxury redesign verification: every screen at desktop 1920 x 1080 and phone
+390 x 844, with no horizontal overflow or JavaScript runtime exceptions.
+Intro fits without scrolling at both sizes; button and note fit within the
+viewport. Progress track width checked. Reduced motion stops the beam and
+leaf animations and hides steam hearts. Before/after screenshots captured.
+This redesign does not change any scripts or original element IDs.
+AV and glass-latte refinement: all 11 screens checked at 1920 x 1080 and
+390 x 844, with no horizontal overflow or JavaScript runtime exceptions.
+Intro fits with no scrolling and separate button/note rectangles.
+Three SVG monograms and one occasional steam heart verified. Yes and success
+heart effects end on time. Reduced motion stops the glass float and displays
+the completed monogram without animation. Email delivery was not triggered.
+script.js and tracking.js remain unchanged in this refinement; only the
+intro heart count changed in the separate visual-effects script.
+Ceramic cup and new loader: checked desktop 1920 x 1080 and phone 390 x 844.
+All 11 screens checked; intro fits with no overlap between action and note.
+Loader timing and reduced-motion bypass checked in Chrome. A never-resolving
+font-ready promise is simulated to check the deadline. Loader screenshot is
+the actual loader design frozen at 1.2 seconds for a clear halfway preview.
+Original element IDs preserved, including retired SVG definition IDs.
+script.js and tracking.js unchanged; only the visual preloader timing in
+fx.js is updated. No EmailJS configuration or saved-progress logic changed.
+Responsive real-photo revision: tested through http://127.0.0.1:5501/ at
+1920 x 1080 and 390 x 844. All 11 screen layouts checked. Intro fits without
+scrolling, and its action and note do not overlap. Desktop selects cup.webp
+at 300px; standard-density phone selects cup-small.webp at 230px. Both decode.
+120 repeated No dodges checked at 360px and desktop widths, with no overlap
+and at least 14px clearance from Yes. Yes and success hearts end on time.
+Reduced motion skips the loader and leaves zero running CSS animations.
+Screenshots: previews/photo-loader-*, photo-intro-*, photo-question-* and
+photo-success-*. The loader preview is frozen at 1.2 seconds.
+All original IDs preserved. script.js and tracking.js remain unchanged.
+No commit, push or deployment performed for this revision.
+Arch background revision: all 11 screens checked at 1920 x 1080 and 390 x 844.
+Intro still fits with no scrolling or overlap between its button and note.
+The arch is 560px wide on desktop and 88vw on phone, without clipping content.
+The window/leaf elements are removed. Gradient moods crossfade over 1.8s.
+The arch outline completes its draw and is static immediately in reduced
+motion; zero CSS animations run with reduced motion. No runtime exceptions.
+Screenshots: previews/arch-intro-*, arch-question-* and arch-review-*.
+The original IDs, EmailJS scripts, saved progress, screen flow and cup photo
+files are unchanged. No commit, push or deployment performed.
+Café-photo revision: all 11 screens checked at 1920 x 1080 and 390 x 844.
+Responsive background sources verified against the 768px breakpoint. Intro
+fits without scrolling, with the badge inside the card and separate action
+and note rectangles. No horizontal overflow or JavaScript runtime exceptions.
+Reduced motion disables the café zoom and leaves no running CSS animations.
+Screenshots: previews/cafe-intro-*, cafe-question-* and cafe-success-*.
+The arch and gradient glow layers are removed. Loader, monograms, heart
+effects, No movement, cup photos, IDs, EmailJS and tracking remain unchanged.
+No commit, push or deployment performed.
+Deployment readiness: only assets/fur-elise-piano.mp3 and
+assets/cafe-ambience.mp3 remain as audio files, including the refreshed zip.
+Unused love-piano.mp3 removed. Forbidden downloads are absent. All four
+required WebP images are included. Original script.js/tracking.js unchanged.
+Local actual-choice flow passed at desktop 1920 x 1080 and phone 390 x 844.
+Audio gains reached 0.30/0.12; current piano duration is 37.55 seconds.
+Review was reached without pressing Make it official. Success was inspected
+via navigation only, with confirmed=false. EmailJS was intercepted in the
+isolated browser session only, preventing tracking or confirmation sends.
+No JavaScript exceptions or console.error calls. YouTube embed was attempted;
+playback was unavailable/unconfirmed and the direct fallback was present.
+Focus loader with a deliberately stalled font-ready promise completed in
+3.42 seconds, below the 3.5-second cap. Actual Open and Continue buttons plus
+goBack were checked against the unchanged history logic.
+Music revision: Chrome desktop 1920 x 1080 and phone-sized 390 x 844 checks.
+No MP3 requests, AudioContext or video iframe before a tap. A trusted toggle
+tap fetches and decodes exactly two files: piano 60s, ambience 96s. Both
+BufferSources loop; gain ramps settle at 0.30 and 0.12. Off reaches zero and
+suspends the context. Turning on again reuses the decoded buffers.
+Simulated hidden/visible events suspend and resume with a fade. Reopening
+starts muted. Reduced-motion bars remain static. Navbar does not overlap.
+Success card loads youtube-nocookie iframe only on tap, mutes background
+audio, and exposes the supplied YouTube fallback. Close removes the iframe
+and restores prior music. The embed reported video unavailable during tests.
+No JavaScript runtime exceptions; the on-device Safari/Android behavior is
+implemented through gesture-time AudioContext resume, but was not tested
+on physical phones. Existing protected scripts and assets are unchanged.
+No commit, push or deployment performed.
+Integrated café-scene revision: all 11 screens checked at 1920 x 1080 and
+390 x 844. Intro is transparent and fits without scrolling; badge, action,
+note and bottom cup have separate rectangles. Custom cursor visuals hidden.
+Smoked-glass screens retain cream/gold type; review ticket remains cream.
+No horizontal overflow or JavaScript runtime exceptions.
+Screenshots: previews/scene-intro-*, scene-question-* and scene-success-*.
+Only presentation changes; scripts, photos and protected logic unchanged.
+Ambient and focus-loader revision: forward and backward transitions through
+all 11 screens checked at desktop 1920 x 1080 and phone 390 x 844.
+Intro fits with the entire cup visible. Double taps do not skip screens;
+Yes still emits six outlined heart bubbles and removes them after 2 seconds.
+Reduced motion bypasses the loader, disables ambient effects and uses a
+0.3-second navigation fade. No JavaScript runtime exceptions.
+Screenshots: previews/ambient-loader-*, ambient-focus-*, ambient-intro-* and
+ambient-transition-*. Loader/focus previews freeze their real CSS animations
+at the respective midpoint for a clear static preview.
+No sound file is bundled, so actual audio playback awaits cafe-ambience.mp3.
+script.js, tracking.js, the AV SVG and photo files remain unchanged. fx.js
+changes are restricted to preloader timing; ambience.js handles presentation.
+No commit, push or deployment performed.
 
 All 11 screens checked at each size: active screen, matching sunlight mood,
 no horizontal overflow, no fluid canvas and no JavaScript runtime exceptions.

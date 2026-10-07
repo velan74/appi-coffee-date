@@ -6,7 +6,7 @@
     if (scene) {
         const steam = document.createElement('div');
         steam.className = 'steam-hearts'; steam.setAttribute('aria-hidden', 'true');
-        steam.innerHTML = `<span>${outline}</span><span>${outline}</span>`;
+        steam.innerHTML = `<span>${outline}</span>`;
         scene.appendChild(steam);
     }
     const clear = () => document.querySelectorAll('.heart-bubble-layer').forEach(layer => layer.remove());

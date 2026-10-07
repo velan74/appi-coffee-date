@@ -17,6 +17,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,200..700,0..100;1,9..144,200..700,0..100&family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="luxury.css">
+    <link rel="stylesheet" href="cafe-theme.css">
+    <link rel="stylesheet" href="scene-theme.css">
+    <link rel="stylesheet" href="ambience.css">
+    <link rel="stylesheet" href="music.css">
 
     <!-- EmailJS (loaded once) -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -34,6 +39,59 @@
     ====================================================== -->
     <svg class="svg-defs" aria-hidden="true" focusable="false">
         <defs>
+
+                    <clipPath id="loaderClip">
+                        <text x="50%" y="168" text-anchor="middle">Appi</text>
+                    </clipPath>
+                    <linearGradient id="loaderFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#f6e2c4"/>
+                        <stop offset=".45" stop-color="#e2b07a"/>
+                        <stop offset="1" stop-color="#a5602f"/>
+                    </linearGradient>
+
+
+                            <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#bfae9c"/>
+                                <stop offset=".28" stop-color="#fbf5ee"/>
+                                <stop offset=".55" stop-color="#efe5d9"/>
+                                <stop offset="1" stop-color="#a8957f"/>
+                            </linearGradient>
+                            <linearGradient id="ceramicHandle" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0" stop-color="#efe4d6"/>
+                                <stop offset="1" stop-color="#9c8771"/>
+                            </linearGradient>
+                            <radialGradient id="saucer" cx=".42" cy=".35" r=".75">
+                                <stop offset="0" stop-color="#fbf6f0"/>
+                                <stop offset=".6" stop-color="#e5d8c8"/>
+                                <stop offset="1" stop-color="#9f8b76"/>
+                            </radialGradient>
+                            <radialGradient id="crema" cx=".5" cy=".5" r=".55">
+                                <stop offset="0" stop-color="#d79a5e"/>
+                                <stop offset=".55" stop-color="#a6602d"/>
+                                <stop offset=".9" stop-color="#5a2f14"/>
+                                <stop offset="1" stop-color="#2d160a"/>
+                            </radialGradient>
+                            <radialGradient id="cupShadow" cx=".5" cy=".5" r=".5">
+                                <stop offset="0" stop-color="#795333" stop-opacity=".65"/>
+                                <stop offset="1" stop-color="#795333" stop-opacity="0"/>
+                            </radialGradient>
+                            <clipPath id="surfaceClip">
+                                <ellipse cx="160" cy="121" rx="80" ry="18.5"/>
+                            </clipPath>
+
+                            <linearGradient id="latteGlass" x1="0" x2="1"><stop stop-color="#fffcf4" stop-opacity=".48"/><stop offset=".18" stop-color="#fffaf0" stop-opacity=".05"/><stop offset=".68" stop-color="#fffdf7" stop-opacity=".06"/><stop offset="1" stop-color="#fffdf7" stop-opacity=".50"/></linearGradient>
+                            <linearGradient id="latteMilk" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f2dfc1"/><stop offset=".62" stop-color="#dcc3a2"/><stop offset="1" stop-color="#c4a282"/></linearGradient>
+                            <linearGradient id="latteEspresso" x1="0" x2="1"><stop stop-color="#734629"/><stop offset=".5" stop-color="#9b6740"/><stop offset="1" stop-color="#6c4028"/></linearGradient>
+                            <radialGradient id="latteTop"><stop stop-color="#c59260"/><stop offset="1" stop-color="#925e37"/></radialGradient>
+                            <clipPath id="latteInside"><path d="M99 114Q160 97 221 114L210 274Q208 291 160 291Q112 291 110 274Z"/></clipPath>
+
+                            <linearGradient id="bowlIvory" x1="0" y1="0" x2="1" y2=".3"><stop stop-color="#e2d2bb"/><stop offset=".22" stop-color="#fff7e6"/><stop offset=".48" stop-color="#f3e8d4"/><stop offset=".78" stop-color="#d7c5ac"/><stop offset="1" stop-color="#bfa88a"/></linearGradient>
+                            <linearGradient id="bowlGlaze" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffdf0" stop-opacity=".45"/><stop offset=".55" stop-color="#fffdf0" stop-opacity=".02"/><stop offset="1" stop-color="#8d6a4c" stop-opacity=".12"/></linearGradient>
+                            <radialGradient id="flatSaucer" cx=".4" cy=".25" r=".8"><stop stop-color="#fff8e9"/><stop offset=".65" stop-color="#ecdfc8"/><stop offset="1" stop-color="#b9a489"/></radialGradient>
+                            <radialGradient id="specialtyCrema" cx=".42" cy=".35"><stop stop-color="#bd834d"/><stop offset=".63" stop-color="#9b5f31"/><stop offset="1" stop-color="#603519"/></radialGradient>
+                            <filter id="ceramicSoftShadow" x="-40%" y="-80%" width="190%" height="270%"><feGaussianBlur stdDeviation="8"/></filter>
+                            <filter id="ceramicContact" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="2"/></filter>
+
             <filter id="goo">
                 <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"/>
                 <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10" result="goo"/>
@@ -54,28 +112,13 @@
     <!-- =====================================================
          PRELOADER — liquid pour
     ====================================================== -->
-    <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader premium-loader" id="loader" aria-hidden="true">
+        <div class="loader-focus-veil"></div>
         <div class="loader-inner">
-            <svg class="loader-word" viewBox="0 0 600 220" role="presentation">
-                <defs>
-                    <clipPath id="loaderClip">
-                        <text x="50%" y="168" text-anchor="middle">Appi</text>
-                    </clipPath>
-                    <linearGradient id="loaderFill" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stop-color="#f6e2c4"/>
-                        <stop offset=".45" stop-color="#e2b07a"/>
-                        <stop offset="1" stop-color="#a5602f"/>
-                    </linearGradient>
-                </defs>
-                <text class="loader-outline" x="50%" y="168" text-anchor="middle">Appi</text>
-                <g clip-path="url(#loaderClip)">
-                    <g class="loader-level">
-                        <path class="loader-wave" fill="url(#loaderFill)"
-                              d="M0 30 Q 50 10 100 30 T 200 30 T 300 30 T 400 30 T 500 30 T 600 30 T 700 30 T 800 30 T 900 30 T 1000 30 T 1100 30 T 1200 30 V 400 H 0 Z"/>
-                    </g>
-                </g>
-            </svg>
-            <p class="loader-caption"><span>Brewing your invitation</span><i></i><i></i><i></i></p>
+            <div class="loader-seal"><svg class="av-monogram" viewBox="0 0 100 100" role="img" aria-label="Appi and Velan crafted monogram"><circle class="av-circle av-draw" cx="50" cy="50" r="46" pathLength="1"/><g class="av-letters"><path class="av-draw av-hairline" pathLength="1" d="M22 72L41 24M29 54H53M17 72H30M36 24H46M53 72H66M44 28H56M76 28H87"/><path class="av-draw av-contrast" pathLength="1" d="M41 24L60 72"/><path class="av-draw av-v-stem" pathLength="1" d="M49 28L61 65"/><path class="av-draw av-hairline" pathLength="1" d="M82 28L67 66"/><path class="av-draw av-heart-tip" pathLength="1" d="M64 66C61 60 56 62 59 67L64 74L69 67C72 62 67 60 64 66Z"/></g></svg></div>
+            <div class="loader-name">Appi</div>
+            <p class="loader-caption">Brewing something for you…</p>
+            <div class="loader-gold-line"></div>
         </div>
     </div>
 
@@ -84,6 +127,7 @@
          BACKGROUND SYSTEM
     ====================================================== -->
     <div class="background-system" aria-hidden="true">
+        <div class="cafe-photo"></div>
         <div class="sunlight-wall">
             <div class="sun-mood is-current" data-mood="intro"></div>
             <div class="sun-mood" data-mood="story"></div>
@@ -97,10 +141,6 @@
             <div class="sun-mood" data-mood="review"></div>
             <div class="sun-mood" data-mood="success"></div>
         </div>
-        <div class="window-shadow"></div>
-        <div class="leaf-shadow leaf-shadow-one"></div>
-        <div class="leaf-shadow leaf-shadow-two"></div>
-        <div class="warm-bloom"></div>
         <div class="sun-dust"><i style="--x:48%;--y:8%;--delay:-0s;--duration:24s"></i><i style="--x:65%;--y:31%;--delay:-2.7s;--duration:27s"></i><i style="--x:82%;--y:54%;--delay:-5.4s;--duration:30s"></i><i style="--x:50%;--y:77%;--delay:-8.100000000000001s;--duration:33s"></i><i style="--x:67%;--y:22%;--delay:-10.8s;--duration:36s"></i><i style="--x:84%;--y:45%;--delay:-13.5s;--duration:24s"></i><i style="--x:52%;--y:68%;--delay:-16.200000000000003s;--duration:27s"></i><i style="--x:69%;--y:13%;--delay:-18.900000000000002s;--duration:30s"></i><i style="--x:86%;--y:36%;--delay:-21.6s;--duration:33s"></i><i style="--x:54%;--y:59%;--delay:-24.3s;--duration:36s"></i><i style="--x:71%;--y:82%;--delay:-27s;--duration:24s"></i><i style="--x:88%;--y:27%;--delay:-29.700000000000003s;--duration:27s"></i></div>
         <div class="celebration-light"></div>
         <div class="spotlight" id="spotlight"></div>
@@ -135,7 +175,7 @@
     ====================================================== -->
     <header class="topbar">
         <div class="brand">
-            <span class="brand-mark"><span>☕</span></span>
+            <span class="brand-mark"><svg class="av-monogram" viewBox="0 0 100 100" role="img" aria-label="Appi and Velan crafted monogram"><circle class="av-circle av-draw" cx="50" cy="50" r="46" pathLength="1"/><g class="av-letters"><path class="av-draw av-hairline" pathLength="1" d="M22 72L41 24M29 54H53M17 72H30M36 24H46M53 72H66M44 28H56M76 28H87"/><path class="av-draw av-contrast" pathLength="1" d="M41 24L60 72"/><path class="av-draw av-v-stem" pathLength="1" d="M49 28L61 65"/><path class="av-draw av-hairline" pathLength="1" d="M82 28L67 66"/><path class="av-draw av-heart-tip" pathLength="1" d="M64 66C61 60 56 62 59 67L64 74L69 67C72 62 67 60 64 66Z"/></g></svg></span>
             <div class="brand-copy">
                 <span class="brand-title">Appi <em>×</em> Velan</span>
                 <span class="brand-subtitle">Private invitation</span>
@@ -172,79 +212,17 @@
                 <div class="hero-coffee-scene">
                     <div class="hero-glow"></div>
 
-                    <svg class="hero-cup" viewBox="0 0 320 300" role="img" aria-label="A cup of coffee with latte art">
-                        <defs>
-                            <linearGradient id="ceramic" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0" stop-color="#bfae9c"/>
-                                <stop offset=".28" stop-color="#fbf5ee"/>
-                                <stop offset=".55" stop-color="#efe5d9"/>
-                                <stop offset="1" stop-color="#a8957f"/>
-                            </linearGradient>
-                            <linearGradient id="ceramicHandle" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0" stop-color="#efe4d6"/>
-                                <stop offset="1" stop-color="#9c8771"/>
-                            </linearGradient>
-                            <radialGradient id="saucer" cx=".42" cy=".35" r=".75">
-                                <stop offset="0" stop-color="#fbf6f0"/>
-                                <stop offset=".6" stop-color="#e5d8c8"/>
-                                <stop offset="1" stop-color="#9f8b76"/>
-                            </radialGradient>
-                            <radialGradient id="crema" cx=".5" cy=".5" r=".55">
-                                <stop offset="0" stop-color="#d79a5e"/>
-                                <stop offset=".55" stop-color="#a6602d"/>
-                                <stop offset=".9" stop-color="#5a2f14"/>
-                                <stop offset="1" stop-color="#2d160a"/>
-                            </radialGradient>
-                            <radialGradient id="cupShadow" cx=".5" cy=".5" r=".5">
-                                <stop offset="0" stop-color="#795333" stop-opacity=".65"/>
-                                <stop offset="1" stop-color="#795333" stop-opacity="0"/>
-                            </radialGradient>
-                            <clipPath id="surfaceClip">
-                                <ellipse cx="160" cy="121" rx="80" ry="18.5"/>
-                            </clipPath>
-                        </defs>
-
-                        <ellipse cx="160" cy="268" rx="150" ry="22" fill="url(#cupShadow)"/>
-
-                        <!-- saucer -->
-                        <ellipse cx="160" cy="250" rx="132" ry="30" fill="url(#saucer)"/>
-                        <ellipse cx="160" cy="246" rx="86" ry="17" fill="#d9cab8" opacity=".7"/>
-                        <ellipse cx="160" cy="252" rx="132" ry="30" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1"/>
-
-                        <!-- handle -->
-                        <path d="M243 140 C 302 128, 306 206, 232 206" fill="none" stroke="url(#ceramicHandle)" stroke-width="15" stroke-linecap="round"/>
-                        <path d="M246 147 C 288 140, 290 196, 236 198" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
-
-                        <!-- body -->
-                        <path d="M70 120 C 70 192, 100 238, 160 240 C 220 238, 250 192, 250 120 Z" fill="url(#ceramic)"/>
-                        <path class="cup-shine" d="M92 136 C 94 182, 108 214, 128 226" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="7" stroke-linecap="round"/>
-
-                        <!-- rim + liquid -->
-                        <ellipse cx="160" cy="120" rx="90" ry="23" fill="#fbf6ef"/>
-                        <ellipse cx="160" cy="121" rx="80" ry="18.5" fill="url(#crema)" class="coffee-surface"/>
-
-                        <g clip-path="url(#surfaceClip)">
-                            <g transform="translate(160 121) scale(1 .235)">
-                                <g class="latte-art">
-                                    <ellipse cx="0" cy="0" rx="44" ry="56" fill="#f4e4cf" opacity=".9"/>
-                                    <ellipse cx="0" cy="-6" rx="30" ry="41" fill="#c98a52" opacity=".8"/>
-                                    <ellipse cx="0" cy="-10" rx="18" ry="28" fill="#f6e8d6"/>
-                                    <path d="M0 -64 L 0 66" stroke="#c98a52" stroke-width="3" opacity=".6"/>
-                                    <circle cx="-52" cy="38" r="5" fill="#f4e4cf" opacity=".5"/>
-                                    <circle cx="48" cy="-44" r="3.5" fill="#f4e4cf" opacity=".45"/>
-                                </g>
-                            </g>
-                            <ellipse cx="128" cy="113" rx="30" ry="5" fill="#fff" opacity=".18" class="coffee-highlight"/>
-                        </g>
-
-                        <ellipse cx="160" cy="120" rx="90" ry="23" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="1.2"/>
-
-                        <!-- steam -->
-                        <g class="steam" filter="url(#steamFilter)">
-                            <path class="steam-path steam-a" d="M132 96 C 118 74, 146 58, 132 34 C 122 16, 138 4, 134 -10"/>
-                            <path class="steam-path steam-b" d="M162 92 C 176 68, 148 52, 164 28 C 176 10, 158 -4, 164 -20"/>
-                            <path class="steam-path steam-c" d="M190 98 C 180 80, 202 64, 190 44 C 182 28, 196 18, 192 4"/>
-                        </g>
+                    <picture class="cup-photo-picture">
+                        <source media="(max-width: 640px)"
+                                srcset="assets/cup-small.webp 450w, assets/cup.webp 900w" sizes="230px">
+                        <img class="hero-cup-photo" src="assets/cup.webp"
+                             srcset="assets/cup.webp 900w" sizes="300px"
+                             alt="A latte with heart latte art" decoding="async" fetchpriority="high">
+                    </picture>
+                    <svg class="photo-steam" viewBox="0 0 120 95" aria-hidden="true" focusable="false">
+                        <path d="M34 88C18 66 47 57 33 38C24 25 37 16 35 5"/>
+                        <path d="M60 87C76 68 48 55 62 36C73 21 59 14 62 2"/>
+                        <path d="M88 89C74 73 98 59 86 42C78 29 91 22 89 11"/>
                     </svg>
                 </div>
 
@@ -606,6 +584,7 @@
 
                 <div class="ticket">
                     <div class="ticket-sheen"></div>
+                    <div class="ticket-monogram" aria-hidden="true"><svg class="av-monogram" viewBox="0 0 100 100" role="img" aria-label="Appi and Velan crafted monogram"><circle class="av-circle av-draw" cx="50" cy="50" r="46" pathLength="1"/><g class="av-letters"><path class="av-draw av-hairline" pathLength="1" d="M22 72L41 24M29 54H53M17 72H30M36 24H46M53 72H66M44 28H56M76 28H87"/><path class="av-draw av-contrast" pathLength="1" d="M41 24L60 72"/><path class="av-draw av-v-stem" pathLength="1" d="M49 28L61 65"/><path class="av-draw av-hairline" pathLength="1" d="M82 28L67 66"/><path class="av-draw av-heart-tip" pathLength="1" d="M64 66C61 60 56 62 59 67L64 74L69 67C72 62 67 60 64 66Z"/></g></svg></div>
 
                     <div class="ticket-top">
                         <span>Private coffee plan</span>
@@ -653,9 +632,7 @@
         <section class="screen" id="success" data-label="It's official">
             <div class="screen-inner success-inner">
 
-                <div class="success-mark">
-                    <span>☕</span>
-                </div>
+                <div class="success-mark"><svg class="av-monogram" viewBox="0 0 100 100" role="img" aria-label="Appi and Velan crafted monogram"><circle class="av-circle av-draw" cx="50" cy="50" r="46" pathLength="1"/><g class="av-letters"><path class="av-draw av-hairline" pathLength="1" d="M22 72L41 24M29 54H53M17 72H30M36 24H46M53 72H66M44 28H56M76 28H87"/><path class="av-draw av-contrast" pathLength="1" d="M41 24L60 72"/><path class="av-draw av-v-stem" pathLength="1" d="M49 28L61 65"/><path class="av-draw av-hairline" pathLength="1" d="M82 28L67 66"/><path class="av-draw av-heart-tip" pathLength="1" d="M64 66C61 60 56 62 59 67L64 74L69 67C72 62 67 60 64 66Z"/></g></svg></div>
 
                 <p class="eyebrow">It's official</p>
 
@@ -768,6 +745,8 @@
     <!-- =====================================================
          SCRIPTS
     ====================================================== -->
+    <script src="ambience.js"></script>
+    <script src="music.js"></script>
     <script src="fx.js"></script>
     <script src="script.js"></script>
     <script src="calendar.js"></script>
