@@ -1,6 +1,7 @@
 /* Content belongs to the café: luminous type, smoked glass, and a grounded cup. */
 :root { --ink:#f6ecdf; --ink-2:rgba(246,236,223,.85); --ink-3:#d5bea2; --ink-4:rgba(246,236,223,.55); --crema:#e2b07a; --crema-hi:#f0d4ac; --line:rgba(201,167,122,.23); --line-2:rgba(201,167,122,.42); --g-text:linear-gradient(#e2b07a,#e2b07a); }
 html,body { background:#2a1a12; }
+html { overflow-x:hidden; }
 .background-system::after { content:''; position:absolute; inset:0; opacity:1; pointer-events:none; background:radial-gradient(ellipse 52% 74% at 50% 51%,rgba(42,26,18,.61),rgba(42,26,18,.32) 76%,transparent 100%),linear-gradient(180deg,rgba(42,26,18,.04) 0%,rgba(42,26,18,.15) 40%,rgba(42,26,18,.58) 100%); }
 .sun-mood { opacity:0; }
 .sun-mood.is-current { opacity:.48; }
