@@ -717,39 +717,25 @@ function moveNoButton() {
             .getBoundingClientRect();
 
 
-    const maxX =
-        Math.max(
-            8,
-            container.width -
-            button.width -
-            8
-        );
-
-    const maxY =
-        Math.max(
-            8,
-            container.height -
-            button.height -
-            8
-        );
-
-
-    const x =
-        8 +
-        Math.random() *
-        Math.max(
-            0,
-            maxX - 8
-        );
-
-    const y =
-        8 +
-        Math.random() *
-        Math.max(
-            0,
-            maxY - 8
-        );
-
+    // Keep the landing rectangle outside Yes, including a generous safety margin.
+    const yesRect = $("yesButton").getBoundingClientRect();
+    const width = noButton.offsetWidth;
+    const height = noButton.offsetHeight;
+    const maxX = Math.max(8, questionButtons.clientWidth - width - 8);
+    const maxY = Math.max(8, questionButtons.clientHeight - height - 12);
+    const minY = Math.max(8, yesRect.bottom - container.top + 28);
+    const oldX = noButton.offsetLeft;
+    const oldY = noButton.offsetTop;
+    const candidates = [];
+    for (let i = 0; i < 48; i++) {
+        const px = 8 + Math.random() * (maxX - 8);
+        const py = minY + Math.random() * Math.max(0, maxY - minY);
+        if (Math.hypot(px - oldX, py - oldY) >= 64) candidates.push({ x: px, y: py });
+    }
+    // Corners guarantee a distant fallback even after repeated rapid taps.
+    const corners = [{x:8,y:minY},{x:maxX,y:minY},{x:8,y:maxY},{x:maxX,y:maxY}];
+    corners.sort((a,b) => Math.hypot(b.x-oldX,b.y-oldY)-Math.hypot(a.x-oldX,a.y-oldY));
+    const { x, y } = candidates.length ? candidates[Math.floor(Math.random()*candidates.length)] : corners[0];
 
     noButton.style.position =
         "absolute";
